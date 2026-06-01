@@ -14,13 +14,13 @@
 
 ### 📥 下载与安装
 
-前往 [Releases 页面](../../releases) 下载最新版本（v0.2）的安装包：
+前往 [Releases 页面](../../releases) 下载最新版本（v0.3）的压缩包：
 
-- **离线安装包（推荐）**：`骨龄预测_离线安装包.exe`（约 50 MB）
+- **离线安装包（推荐）**：`骨龄预测工具v0.3.exe`
   - 双击运行，选择安装路径
   - 安装完成后桌面自动生成快捷方式
-- **便携版**：`BoneAge_Portable_v0.2.zip`
-  - 解压后双击 `main.exe` 即可运行
+- **便携版**：`骨龄预测小工具v0.3.zip`
+  - 解压后双击 `骨龄预测.exe` 即可运行
 
 ### 🖥️ 使用说明
 
@@ -38,7 +38,7 @@
 | 模型结构 | EfficientNet-B4 + 模糊集隶属度回归 |
 | 推理引擎 | ONNX Runtime 1.16.3 |
 | 图像处理 | Pillow + NumPy |
-| GUI 框架 | Tkinter |
+| GUI 框架 | DearPyGui |
 | 打包工具 | PyInstaller + Inno Setup |
 
 ### 🔧 开发者指南
@@ -50,7 +50,7 @@ python -m venv onnx_env
 onnx_env\Scripts\activate
 
 # 安装依赖
-pip install onnxruntime==1.16.3 pillow numpy
+pip install onnxruntime==1.16.3 pillow numpy dearpygui
 
 # （可选）如需将 .pth 转换为 .onnx
 pip install torch torchvision
@@ -77,6 +77,11 @@ Q: 是否支持批量预测？
 A: 当前版本仅支持单张预测，批量功能计划在后续版本中加入。
 
 🚧 更新日志
+v0.3 (2026-06-02)
+- 将 UI 框架从 Tkinter 更换为 DearPyGui，界面更现代、交互更流畅
+- 优化图像预览与结果显示区域的布局
+- 修复若干细节问题，提升稳定性
+
 v0.2 (2026-04-19)
 模型转换为 ONNX 格式，启动速度提升 5 倍
 
@@ -105,15 +110,15 @@ Portable: No Python, PyTorch, or CUDA installation required. Runs natively on Wi
 Offline Ready: All dependencies are self-contained.
 
 📥 Download & Installation
-Visit the Releases page to download the latest version (v0.2):
+Visit the Releases page to download the latest version (v0.3):
 
-Offline Installer (Recommended): 骨龄预测_离线安装包.exe (~50 MB)
+Offline Installer (Recommended): 骨龄预测_离线安装包_v0.3.exe (~55 MB)
 
 Double-click to run, choose installation directory
 
 Desktop shortcut created automatically
 
-Portable Version: BoneAge_Portable_v0.2.zip
+Portable Version: BoneAge_Portable_v0.3.zip
 
 Extract and run main.exe directly
 
@@ -133,7 +138,7 @@ Component	Technology
 Model Architecture	EfficientNet-B4 + Fuzzy Membership Regression
 Inference Engine	ONNX Runtime 1.16.3
 Image Processing	Pillow + NumPy
-GUI Framework	Tkinter
+GUI Framework	DearPyGui
 Packaging	PyInstaller + Inno Setup
 🔧 Developer Guide
 To run from source or customize:
@@ -144,7 +149,7 @@ python -m venv onnx_env
 onnx_env\Scripts\activate
 
 # Install dependencies
-pip install onnxruntime==1.16.3 pillow numpy
+pip install onnxruntime==1.16.3 pillow numpy dearpygui
 
 # (Optional) Convert .pth to .onnx
 pip install torch torchvision
@@ -171,6 +176,11 @@ Q: Does it support batch prediction?
 A: Currently only single-image prediction is supported; batch mode is planned for future releases.
 
 🚧 Changelog
+v0.3 (2026-06-02)
+- Replaced Tkinter with DearPyGui for a modern, smoother UI
+- Improved layout of image preview and result display
+- Miscellaneous bug fixes and stability improvements
+
 v0.2 (2026-04-19)
 Converted model to ONNX for 5× faster startup
 
@@ -186,4 +196,4 @@ Initial release with single-image prediction
 📄 License
 This project is licensed under the MIT License.
 
-<p align="center"> Made with ❤️ by xiaohaiwang </p> ```
+<p align="center"> Made with ❤️ by xiaohaiwang </p>
